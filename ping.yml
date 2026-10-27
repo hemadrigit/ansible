@@ -1,0 +1,7 @@
+---
+- name: ping module to connect server check
+  hosts: current-server
+  gather_facts: no
+  tasks:
+     - name: ping module 
+       ping:
