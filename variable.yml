@@ -1,0 +1,10 @@
+---
+- name: variables in ansible
+  hosts: localhost
+  connection: local
+  vars:
+    name: hemadri
+  tasks:
+     - name: vairables checking
+       ansible.builtin.debug:
+          msg: "my name is {{ name }}"
