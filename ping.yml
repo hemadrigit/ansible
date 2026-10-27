@@ -2,7 +2,7 @@
 - name: ping module to connect server check
   hosts: current-server
   gather_facts: no
-  connecton: local
+  connection: local
   tasks:
      - name: ping module 
        ping:
