@@ -12,6 +12,6 @@
     - name: Install packages on target server
       ansible.builtin.package:
         name: "{{ item }}"
-        state: present
+        state: absent
       loop: "{{ packages }}"
       when: item == "nginx"
