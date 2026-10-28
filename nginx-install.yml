@@ -10,7 +10,7 @@
 
   tasks:
     - name: Install packages on target server
-      ansible.builtin.packages:
+      ansible.builtin.package:
         name: "{{ item }}"
         state: present
       loop: "{{ packages }}"
