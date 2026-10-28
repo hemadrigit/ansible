@@ -1,0 +1,9 @@
+---
+- name: Display the system information
+  hosts: localhost
+  connection: local
+  gather_facts: yes
+  tasks:
+    - name: Display the system information using gather_facts
+      ansible.builtin.debug:
+         msg: "current system IP is {{ ansible_facts.hostname }}, OS family is {{ ansible_facts.os_family }}"
