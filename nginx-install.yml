@@ -1,0 +1,17 @@
+---
+- name: install nginx
+  hosts: localhost
+  connection: local
+  vars:
+     packages:
+       - nginx
+       - git
+       - httpd
+
+  tasks:
+    - name: Install packages on target server
+      ansible.builtin.packages:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ packages }}"
+      when: item == "nginx"
