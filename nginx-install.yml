@@ -14,4 +14,4 @@
         name: "{{ item }}"
         state: absent
       loop: "{{ packages }}"
-      when: item == "nginx"
+      when: item != "nginx"
