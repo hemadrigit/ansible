@@ -1,0 +1,17 @@
+---
+- name: data types in ansible
+  hosts: localhost
+  connection: local
+  vars:
+    name: Hemadri
+    age: 40
+    weight: 74.5
+    male: yes
+    address:
+      DN: 76
+      locality: gandhi road
+      city: bangalore  
+  tasks:
+     - name: data types values display
+       ansible.builtin.debug:
+          msg: "My name is {{ name }}, age is {{ age }}, weight is {{ weight }}, I am a male {{ male }}, my address is {{ address }}"
